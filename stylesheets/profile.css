@@ -1,0 +1,183 @@
+html {
+    height:90%;
+    margin: 0;
+    overflow: hidden;
+}
+
+body{
+  background-image:url("../images/bianca-background.jpg");
+  background-position: center;
+  background-attachment: fixed;
+  margin: 0;
+  padding: 0;
+  height:100%;
+  /*overflow-y: scroll;
+  overflow-x: hidden;*/
+  animation: fadein 5s;
+  -moz-animation: fadein 5s; /* Firefox */
+  -webkit-animation: fadein 5s; /* Safari and Chrome */
+  -o-animation: fadein 5s; /* Opera */
+}
+
+
+
+.container_overlay{
+  background-color: white;
+  opacity: 0.3;
+  width: 100%;
+  height:100%;
+}
+.container{
+  border: 40px solid white;
+  height: 100%;
+}
+
+
+
+.enter_site_wrapper{
+  position: absolute;
+  left: 68px;
+  top: 65px;
+  width: 550px;
+  animation: fadein 8s;
+  -moz-animation: fadein 8s; /* Firefox */
+  -webkit-animation: fadein 8s; /* Safari and Chrome */
+  -o-animation: fadein 8s; /* Opera */
+}
+
+.enter_site_content{
+  position: absolute;
+  width: 50%;
+  top: 40%;
+  left: 40%;
+}
+
+.item {
+  position:relative;
+  color: #fff;
+  background-color: transparent;
+  padding: 10px;
+  width:47%;
+  border: #fff solid 2px;
+  margin-bottom:10px;
+  display:inline-block;
+  * display:inline;
+  margin: 0px 3px 10px 3px;
+  padding:20px;
+  box-sizing:border-box;
+  text-align:center;
+  text-transform:uppercase;
+  letter-spacing:2px;
+  border-radius:2px;
+  box-shadow:0px 2px 5px rgba(0,0,0,0.5);
+    overflow:hidden;
+}
+
+.item:before {
+  content:'';
+  background-repeat: no-repeat;
+  background-size: 100%;
+  width:30px;
+  height:40px;
+  display:block;
+  margin:0 auto;
+}
+
+.origin.item:before {
+  background-image: url("http://dev-clark-street.gotpantheon.com/sites/all/themes/centrum/images/icon/1.png");
+}
+
+.origin.item:hover:before {
+  background-image: url("http://dev-clark-street.gotpantheon.com/sites/all/themes/centrum/images/icon/1g.png");
+}
+
+
+.item:after {
+  content: "";
+  display:block;
+  border-top: 0 #fff solid;
+  border-bottom: 15px transparent solid;
+  border-left: 15px #fff solid;
+  position:absolute;
+  top:0;
+  left:0;
+  width:0;
+  z-index:-1;
+  overflow:hidden;
+}
+
+.item:hover:after {
+  z-index:-1;
+  border-left: 302px solid #fff;
+  border-bottom:302px solid transparent;
+  overflow:hidden;
+  background-color:#007766;
+}
+
+.item:hover:before {
+  background-image: url("http://cdn.flaticon.com/png/256/66740.png");
+}
+
+.item:hover {
+  color:#007766;
+  overflow:hidden;
+  margin-bottom: 10px;
+}
+
+.item:hover, .item:after, .item {
+  -webkit-transition: 0.5s color ease;
+  -moz-transition: 0.5s color ease;
+  -o-transition: 0.5s color ease;
+  transition: 0.5s color ease;
+}
+
+.item:hover, .item:after {
+  -webkit-transition: 0.5s border ease;
+  -moz-transition: 0.5s border ease;
+  -o-transition: 0.5s border ease;
+  transition: 0.5s border ease;
+}
+
+.item:after {
+    overflow:hidden;
+}
+
+.item:before, .item:hover:before, .item:hover:after {
+  -webkit-transition: 0.75s all ease;
+  -moz-transition: 0.75s all ease;
+  -o-transition: 0.75s all ease;
+  transition: 0.75s all ease;
+}
+
+@keyframes fadein {
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-moz-keyframes fadein { /* Firefox */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-webkit-keyframes fadein { /* Safari and Chrome */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-o-keyframes fadein { /* Opera */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity: 1;
+    }
+}
